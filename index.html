@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>老莫 - 学习文档</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="/99_Settings/vm_vue.css">
+  <link rel="icon" type="image/ico" href="/99_Settings/vm_favicon.ico">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      homepage: 'home.md',
+      name: 'laomodocs',
+      repo: 'ihewro/typecho-theme-handsome-docs',
+      coverpage: true,
+      loadSidebar: true,
+      autoHeader: true,
+      auto2top: true,
+      subMaxLevel: 2,
+      search: {
+        paths: 'auto',
+        placeholder: '输入关键字，寻找答案 🔍',
+        noData: 'No Results! 😞',
+        depth: 6,
+      },
+      plugins: [
+        function (hook) {
+          var footer = [
+            '<hr/>',
+            '<footer>',
+            '<span><a href="www.9uzy.com" target="_blank">LaoMo</a> &copy; 2018. </span>',
+            '<span> Proudly Published with <a href="https://github.com/docsifyjs/docsify" target="_blank">docsify</a>.</span>',
+            '</footer>'
+          ].join('')
+          hook.afterEach(function (html) { return html + footer })
+        }
+      ]
+    }
+  </script>
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <!-- 代码高亮插件 -->
+  <script src="//unpkg.com/prismjs/components/prism-java.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-sql.js"></script>
+  <!-- 全局搜索插件 -->
+  <script src="https://cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js"></script>
+
+  <!-- 代码复制插件 --> 
+  <script src="/99_Settings/vm_copy.js"></script>
+
+  <!-- 图片缩放插件 -->
+  <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+</body>
+</html>
