@@ -4,5 +4,5 @@
 
 
 [联系作者](mailto:root@laomo.io)
-[开始使用](/home)
+[开始使用](/0_doc/home)
 
